@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/_App/Scenes/Basic test.unity
+    guid: f4b4395e0f6b6de4b90ceef222619b07
+  - enabled: 0
+    path: Assets/ARF-sampels/Scenes/SimpleAR/SimpleAR.unity
+    guid: 66451d7de13a4d54c80c6ffbd706fd67
+  - enabled: 1
+    path: Assets/_App/Scenes/BasicARScene.unity
+    guid: 4be1bbafea09cbb45a3cc8f635b3aa00
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: d2bfb9196c978044e882c5a4333c4289,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 870625cec28bf3042b65f804bd1f790f,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9baf064574f6c3a45b3c26618a5e3548,
+      type: 2}
