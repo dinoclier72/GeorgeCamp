@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Resource resource;
+    public int amount = 1;
+    public void pickup()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        resource.AddRessource(amount);
+        Destroy(gameObject);
     }
 }

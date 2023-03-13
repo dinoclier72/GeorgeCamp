@@ -11,7 +11,7 @@ public class Loot
     public int quantity = 1;
 }
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "GeorgeAsset/DropTable")]
 public class DropTables : ScriptableObject
 {
     //une liste de loots que qui peuvent apparaitre
