@@ -27,4 +27,9 @@ public class Tree : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    public void chop(int damage)
+    {
+        health -= damage;
+    }
 }
