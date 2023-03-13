@@ -6,7 +6,9 @@ public class George : MonoBehaviour
 {
     public int damage = 5;
     public Animator playerAnimator;
-    private int Chopping;
+    private bool Chopping;
+    private bool attacking;
+    private Tree tree;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,15 +18,30 @@ public class George : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        îf(Chopping)
-            {
-            tree.chop(damage);
+        if(Chopping)
+        {
             playerAnimator.SetBool("hitting", true);
-        }else
+            if (!attacking)
+            {
+                attacking = true;
+                Invoke("hit", 4);
+            }
+            if(tree == null)
+            {
+                Chopping = false;
+            }
+        }
+        else
         {
             playerAnimator.SetBool("hitting", false);
         }
         
+    }
+
+    void hit()
+    {
+        tree.chop(damage);
+        attacking = false;
     }
 
     void OnTriggerEnter(Collider collision)
@@ -39,9 +56,17 @@ public class George : MonoBehaviour
     {
         if (other.tag == "tree")
         {
-            Tree tree = other.gameObject.GetComponent<Tree>();
+            tree = other.gameObject.GetComponent<Tree>();
             transform.LookAt(tree.transform);
             Chopping = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "tree")
+        {
+            Chopping = false;
         }
     }
 }
