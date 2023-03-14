@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c40128935defd04e8c43b54fb84cde9, type: 3}
-  m_Name: Campfire
+  m_Name: Empty
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6751652558584840739, guid: 03773c750e6f4ef4daefbff811e4c7c3, type: 3}
-  sprite: {fileID: 21300000, guid: 25ba5bddf83ce62409463de3fd9fdca4, type: 3}
-  price:
-  - resource: {fileID: 11400000, guid: f499991f49bcde247aa32606d0c38853, type: 2}
-    price: 5
+  prefab: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 33f9659dc94be4047befaf56d6d3e78f, type: 3}
+  price: []
