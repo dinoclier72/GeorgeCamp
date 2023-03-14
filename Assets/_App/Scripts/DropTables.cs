@@ -24,7 +24,7 @@ public class DropTables : ScriptableObject
         foreach (Loot loot in loots)
         {
             float drawn = Random.Range(0f, 100f);
-            if (loot.Chance <= drawn)
+            if (loot.Chance >= drawn)
             {
                 if (loot.item != null)
                     for(int i =0;i<loot.quantity;i++)

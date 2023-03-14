@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class CharacterNav : MonoBehaviour
 {
-    public Camera cam;
     public UnityEngine.AI.NavMeshAgent player;
     public Animator playerAnimator;
     // Update is called once per frame
@@ -13,7 +12,7 @@ public class CharacterNav : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitPoint;
 
             if(Physics.Raycast(ray,out hitPoint))

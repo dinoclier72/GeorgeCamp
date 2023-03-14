@@ -14,5 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DropTables
   loots:
   - item: {fileID: 7751463562281265885, guid: c5cda4339950fb24cbc537d2d90ca9fa, type: 3}
-    Chance: 0
-    quantity: 5
+    Chance: 100
+    quantity: 1
+  - item: {fileID: 7751463562281265885, guid: c5cda4339950fb24cbc537d2d90ca9fa, type: 3}
+    Chance: 50
+    quantity: 2
+  - item: {fileID: 7751463562281265885, guid: c5cda4339950fb24cbc537d2d90ca9fa, type: 3}
+    Chance: 25
+    quantity: 1
+  - item: {fileID: 7751463562281265885, guid: c5cda4339950fb24cbc537d2d90ca9fa, type: 3}
+    Chance: 10
+    quantity: 1
+  - item: {fileID: 7751463562281265885, guid: c5cda4339950fb24cbc537d2d90ca9fa, type: 3}
+    Chance: 5
+    quantity: 1
