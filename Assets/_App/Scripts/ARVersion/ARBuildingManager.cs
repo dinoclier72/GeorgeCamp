@@ -8,6 +8,10 @@ public class ARBuildingManager : BuildingManager
 {
     //voir building manager
     [SerializeField]private ARRaycastManager arRaycastManager;
+    private void Awake()
+    {
+        arRaycastManager = GameObject.Find("ARSessionOrigin").GetComponent<ARRaycastManager>();
+    }
 private void Update()
     {
         

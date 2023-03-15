@@ -47,10 +47,9 @@ MonoBehaviour:
   George: {fileID: 9078784240312777558, guid: 1b3bc9ba2fc396b4bab99d93a74b6291, type: 3}
   treeList:
   - {fileID: 4703799589108982760, guid: f94f4656e4d9cc645bb7b95b56cdd661, type: 3}
+  - {fileID: 4703799589108982760, guid: f94f4656e4d9cc645bb7b95b56cdd661, type: 3}
   spawnRadius: 2
   playground: {fileID: 8078011721308257055}
-  buildingManager: {fileID: -7060968486214612346, guid: eecd5adaad5f24f489ed0091b23b9ab5,
-    type: 3}
 --- !u!1 &8078011721308257055
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +63,8 @@ GameObject:
   - component: {fileID: 8078011721308257053}
   - component: {fileID: 8078011721308257054}
   - component: {fileID: -8748911243287091282}
+  - component: {fileID: 1391482418214276135}
+  - component: {fileID: 4907795593341599860}
   m_Layer: 0
   m_Name: Playground
   m_TagString: Untagged
@@ -163,3 +164,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 124d8137b3dc4174bab1df1f2204acee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1391482418214276135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078011721308257055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.016666668
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 23a8d7ae02bdd904c92e49f70bd8a30b, type: 2}
+--- !u!114 &4907795593341599860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078011721308257055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4acfeb861245d7745a1232c23c5c6bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaces:
+  - {fileID: 1391482418214276135}

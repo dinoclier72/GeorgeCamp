@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropTable: {fileID: 11400000, guid: 4dd184f7e009f614db6e057d056b7853, type: 2}
   chopped: 0
-  health: 0
+  health: 25
   itemSpawnRadius: 5
 --- !u!65 &4703799589108982761
 BoxCollider:

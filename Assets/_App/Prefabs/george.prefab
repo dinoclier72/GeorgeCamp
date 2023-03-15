@@ -1387,7 +1387,7 @@ GameObject:
   - component: {fileID: 8823936329220633972}
   - component: {fileID: 8823936329220633963}
   - component: {fileID: 8823936329220633967}
-  - component: {fileID: 8823936329220633966}
+  - component: {fileID: -3815049867634142499}
   m_Layer: 0
   m_Name: george
   m_TagString: Untagged
@@ -1481,7 +1481,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8823936329220633966
+--- !u!114 &-3815049867634142499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1490,11 +1490,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8553886583037731308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df5978668635afe41940c5a6b1b54741, type: 3}
+  m_Script: {fileID: 11500000, guid: d1c91af7db861564a93da5fc304456f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8823936329220633967}
   playerAnimator: {fileID: 8823936329220633972}
+  arRaycastManager: {fileID: 7940301005427017622, guid: fcd08510ac346e549b608554ed4cb81a,
+    type: 3}
 --- !u!1 &8677250300465503995
 GameObject:
   m_ObjectHideFlags: 0
