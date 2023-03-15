@@ -9,6 +9,11 @@ public class Tree : MonoBehaviour
     public float health;
     public float itemSpawnRadius = 10;
 
+    void Awake()
+    {
+        itemSpawnRadius *= transform.localScale.x;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -16,10 +21,10 @@ public class Tree : MonoBehaviour
             Die();
     }
 
-    //fonction pour quand l'abre est coupé
+    //fonction pour quand l'abre est coupï¿½
     void Die()
     {
-        //la fonction va disperser les objets genrés par la destruction
+        //la fonction va disperser les objets genrï¿½s par la destruction
         Item[] itemsLooted = dropTable.GetItems();
         foreach(Item item in itemsLooted)
         {

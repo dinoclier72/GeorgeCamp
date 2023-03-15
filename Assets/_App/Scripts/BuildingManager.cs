@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class BuildingManager : MonoBehaviour
 {
-    [SerializeField]private BuildingTypeSO activeBuildingType;
+    [SerializeField]protected BuildingTypeSO activeBuildingType;
     private void Update()
     {
        if(Input.GetMouseButtonDown(0) && activeBuildingType != null && !EventSystem.current.IsPointerOverGameObject() && isBuildingAffordable(activeBuildingType))
@@ -31,7 +31,7 @@ public class BuildingManager : MonoBehaviour
     {
         return activeBuildingType;
     }
-    private bool isBuildingAffordable(BuildingTypeSO buildingtypeSO)
+    protected bool isBuildingAffordable(BuildingTypeSO buildingtypeSO)
     {
         if (buildingtypeSO.price == null)
             return true;
