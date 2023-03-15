@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 
 public class CharacterNav : MonoBehaviour
 {
-    [SerializeField] private UnityEngine.AI.NavMeshAgent player;
-    [SerializeField] private Animator playerAnimator;
+    [SerializeField] protected UnityEngine.AI.NavMeshAgent player;
+    [SerializeField] protected Animator playerAnimator;
     // Update is called once per frame
     void Update()
     {

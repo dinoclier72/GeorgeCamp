@@ -10,6 +10,7 @@ public class ARBuildingManager : BuildingManager
     [SerializeField]private ARRaycastManager arRaycastManager;
 private void Update()
     {
+        
        if(Input.touchCount > 0 && activeBuildingType != null && !EventSystem.current.IsPointerOverGameObject() && isBuildingAffordable(activeBuildingType))
         {
             Touch touch = Input.GetTouch(0);
