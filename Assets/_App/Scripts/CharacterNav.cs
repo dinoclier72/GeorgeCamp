@@ -5,11 +5,12 @@ using UnityEngine.EventSystems;
 
 public class CharacterNav : MonoBehaviour
 {
-    public UnityEngine.AI.NavMeshAgent player;
-    public Animator playerAnimator;
+    [SerializeField] private UnityEngine.AI.NavMeshAgent player;
+    [SerializeField] private Animator playerAnimator;
     // Update is called once per frame
     void Update()
     {
+        //deplacement du personnage
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

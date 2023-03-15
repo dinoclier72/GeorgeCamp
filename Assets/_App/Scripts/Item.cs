@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public Resource resource;
-    public int amount = 1;
+    [SerializeField] private Resource resource;
+    [SerializeField] private int amount = 1;
     public void pickup()
     {
+        //ramasser l'item
         resource.AddRessource(amount);
         Destroy(gameObject);
     }

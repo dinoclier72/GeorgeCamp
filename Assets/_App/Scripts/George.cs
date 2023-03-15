@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class George : MonoBehaviour
 {
-    public int damage = 5;
-    public Animator playerAnimator;
+    [SerializeField] private int damage = 5;
+    [SerializeField] private Animator playerAnimator;
     private bool Chopping;
     private bool attacking;
     private Tree tree;
@@ -18,6 +18,7 @@ public class George : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //destruction de l'arbre
         if(Chopping)
         {
             playerAnimator.SetBool("hitting", true);
@@ -40,12 +41,14 @@ public class George : MonoBehaviour
 
     void hit()
     {
+        //taper l'arbre
         tree.chop(damage);
         attacking = false;
     }
 
     void OnTriggerEnter(Collider collision)
     {
+        //ramasser l'item
         if(collision.tag == "item")
         {
             Item item = collision.gameObject.GetComponent<Item>();
@@ -54,6 +57,7 @@ public class George : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
+        //couper l'arbre
         if (other.tag == "tree")
         {
             tree = other.gameObject.GetComponent<Tree>();
@@ -64,6 +68,7 @@ public class George : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        //arreter de couper l'arbre
         if(other.tag == "tree")
         {
             Chopping = false;

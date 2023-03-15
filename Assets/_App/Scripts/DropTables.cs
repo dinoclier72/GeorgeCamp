@@ -15,11 +15,11 @@ public class Loot
 public class DropTables : ScriptableObject
 {
     //une liste de loots que qui peuvent apparaitre
-    public Loot[] loots;
+    [SerializeField]private Loot[] loots;
     //donne un loot
     public Item[] GetItems()
     {
-        //on pioche si le loot peut être tiré à chaque fois
+        //on pioche si le loot peut ï¿½tre tirï¿½ ï¿½ chaque fois
         List<Item> generatedItems = new List<Item>();
         foreach (Loot loot in loots)
         {

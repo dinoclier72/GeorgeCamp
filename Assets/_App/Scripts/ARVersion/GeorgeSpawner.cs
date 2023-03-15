@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class GeorgeSpawner : MonoBehaviour
 {
-    public Transform George;
-    public List<Tree> treeList;
-    public int spawnRadius;
-    public GameObject playground;
-    public BuildingManager buildingManager;
+    [SerializeField]private Transform George;
+    [SerializeField]private List<Tree> treeList;
+    [SerializeField]private int spawnRadius;
+    [SerializeField]private GameObject playground;
     private static bool TheOneGeorge = false;
     void Awake()
     {
@@ -16,7 +15,6 @@ public class GeorgeSpawner : MonoBehaviour
             return;
         spawnGeorge();
         spawnTree();
-        spawnBuildingManager();
         TheOneGeorge = true;
     }
 
@@ -31,9 +29,5 @@ public class GeorgeSpawner : MonoBehaviour
         {
             Instantiate(tree, transform.position + new Vector3(Random.Range(-size.x, size.x),1, Random.Range(-size.z, size.z)), transform.rotation);
         }
-    }
-    void spawnBuildingManager()
-    {
-        Instantiate(buildingManager, transform.position, transform.rotation);
     }
 }

@@ -12,6 +12,7 @@ public class BuildingTypeSelectUI : MonoBehaviour
 
     private void Awake()
     {
+        //créer un bouton pour chaque type de batiment
         Transform buildingButtonTemplate = transform.Find("BuildingButtonTemplate");
         buildingButtonTemplate.gameObject.SetActive(false);
 
@@ -44,6 +45,7 @@ public class BuildingTypeSelectUI : MonoBehaviour
 
     private void UpdateSelectedVisual()
     {
+        //met a jour l'icone sélectionéee
         foreach (BuildingTypeSO buildingTypeSO in buildingTypeDictionary.Keys)
         {
             buildingTypeDictionary[buildingTypeSO].Find("Selected").gameObject.SetActive(false);

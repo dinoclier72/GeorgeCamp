@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GenerateOnce : MonoBehaviour
 {
-    public static bool AlreadyGenerated = false;
+    [SerializeField]private static bool AlreadyGenerated = false;
     void Awake()
     {
+        //generation unique du plan
         if (AlreadyGenerated) 
         {
             Destroy(gameObject);
